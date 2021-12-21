@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+   <palace-title-bar/>
+
+    <v-main>
+      <palace-vcomponents-sample />
+    </v-main>
+
+    <palace-text-edit/>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { PalaceVcomponentsSample, PalaceTitleBar, PalaceTextEdit } from 'palace-vcomponents';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    PalaceVcomponentsSample,
+    PalaceTitleBar,
+    PalaceTextEdit,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
